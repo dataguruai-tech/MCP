@@ -32,7 +32,7 @@ RUN pnpm store add typescript@4.9.4
 FROM base AS build
 # Set up backend
 WORKDIR /usr/src/app
-COPY .npmrc package.json package-lock.json ./
+COPY .npmrc package.json ./
 RUN bun install
 COPY . .
 # Set NX_NO_CLOUD environment variable
